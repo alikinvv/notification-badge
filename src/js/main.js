@@ -1,14 +1,15 @@
 $(function () {
-// ff2900
-  for (var i = 0; i < 70; i++) {
-    $('.bubbles').append('<circle r="' + getRandomInt(5, 15) + '" cy="300" fill="#ff2900" cx="' + getRandomInt(40, 110) + '"></circle>');
-  }
+    var bubblesCount = 70;
 
-  var html = $('.bubbles').html();
+    for (var i = 0; i < bubblesCount; i++) {
+        $('.bubbles').append('<circle r="' + getRandomInt(5, 15) + '" cy="300" fill="#ff2900" cx="' + getRandomInt(40, 110) + '"></circle>');
+    }
 
-  $('.bubbles').html(html);
+    var html = $('.bubbles').html();
 
-  function getRandomInt (min, max) {
+    $('.bubbles').html(html);
+
+    function getRandomInt (min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min + 1)) + min;
